@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.6 on win32)" generated="20220905 14:24:27.998" rpa="false" schemaversion="3">
+<suite id="s1" name="Cadastro" source="C:\Users\santo\OneDrive\Área de Trabalho\ESTRUTURA-ROBOT\suites\cadastro\cadastro.robot">
+<test id="s1-t1" name="Cenário 1: Deve realizar cadastro" line="9">
+<kw name="Acessar o site register" library="setup_teardown" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${geral.URL}</arg>
+<arg>${geral.BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220905 14:24:28.665" level="INFO">Opening browser 'edge' to base url 'http://demo.automationtesting.in/Register.html'.</msg>
+<status status="PASS" starttime="20220905 14:24:28.664" endtime="20220905 14:25:11.490"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220905 14:25:11.491" endtime="20220905 14:25:11.673"/>
+</kw>
+<status status="PASS" starttime="20220905 14:24:28.663" endtime="20220905 14:25:11.674"/>
+</kw>
+<kw name="Quando eu preencho os dados" library="cadastro_page">
+<kw name="First Name" library="FakerLibrary">
+<var>${primeiRoNome}</var>
+<msg timestamp="20220905 14:25:11.676" level="INFO">${primeiRoNome} = Raymond</msg>
+<status status="PASS" starttime="20220905 14:25:11.675" endtime="20220905 14:25:11.676"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${cadastro.escreverPrimeiroNome}</arg>
+<arg>${primeiRoNome}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220905 14:25:11.677" level="INFO">Typing text 'Raymond' into text field '//input[contains(@placeholder,'First Name')]'.</msg>
+<status status="PASS" starttime="20220905 14:25:11.676" endtime="20220905 14:25:11.827"/>
+</kw>
+<kw name="Last Name" library="FakerLibrary">
+<var>${segundoNome}</var>
+<msg timestamp="20220905 14:25:11.828" level="INFO">${segundoNome} = Flores</msg>
+<status status="PASS" starttime="20220905 14:25:11.827" endtime="20220905 14:25:11.828"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${cadastro.escreverSegundoNome}</arg>
+<arg>${segundoNome}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220905 14:25:11.829" level="INFO">Typing text 'Flores' into text field '//input[contains(@placeholder,'Last Name')]'.</msg>
+<status status="PASS" starttime="20220905 14:25:11.828" endtime="20220905 14:25:12.085"/>
+</kw>
+<kw name="Address" library="FakerLibrary">
+<var>${ENDERECOFAKE}</var>
+<doc>:example: '791 Crist Parks, Sashabury, IL 86039-9874'</doc>
+<msg timestamp="20220905 14:25:12.086" level="INFO">${ENDERECOFAKE} = 6613 Medina Well
+East Sarahland, RI 95510</msg>
+<status status="PASS" starttime="20220905 14:25:12.085" endtime="20220905 14:25:12.086"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${cadastro.escreverEndereco}</arg>
+<arg>${ENDERECOFAKE}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220905 14:25:12.088" level="INFO">Typing text '6613 Medina Well
+East Sarahland, RI 95510' into text field '//textarea'.</msg>
+<status status="PASS" starttime="20220905 14:25:12.087" endtime="20220905 14:25:12.233"/>
+</kw>
+<kw name="Email" library="FakerLibrary">
+<var>${EMAILFAKE}</var>
+<msg timestamp="20220905 14:25:12.234" level="INFO">${EMAILFAKE} = rebecca88@example.com</msg>
+<status status="PASS" starttime="20220905 14:25:12.233" endtime="20220905 14:25:12.234"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${cadastro.escreverEmail}</arg>
+<arg>${EMAILFAKE}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220905 14:25:12.235" level="INFO">Typing text 'rebecca88@example.com' into text field '//input[@type="email"]'.</msg>
+<status status="PASS" starttime="20220905 14:25:12.234" endtime="20220905 14:25:12.328"/>
+</kw>
+<status status="PASS" starttime="20220905 14:25:11.674" endtime="20220905 14:25:12.328"/>
+</kw>
+<kw name="E Clicar na opção masculino" library="cadastro_page">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${cadastro.clicaOpcaoMasculina}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220905 14:25:12.330" level="INFO">Clicking element 'name:radiooptions'.</msg>
+<status status="PASS" starttime="20220905 14:25:12.329" endtime="20220905 14:25:12.394"/>
+</kw>
+<status status="PASS" starttime="20220905 14:25:12.329" endtime="20220905 14:25:12.394"/>
+</kw>
+<kw name="E Clica na opção movies" library="cadastro_page">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${cadastro.clicaOpcaoMovies}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220905 14:25:12.396" level="INFO">Clicking element 'id:checkbox2'.</msg>
+<status status="PASS" starttime="20220905 14:25:12.395" endtime="20220905 14:25:12.445"/>
+</kw>
+<status status="PASS" starttime="20220905 14:25:12.395" endtime="20220905 14:25:12.445"/>
+</kw>
+<kw name="E Selecionar Skill" library="cadastro_page">
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<arg>${cadastro.selecionaSkills}</arg>
+<arg>Android</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<msg timestamp="20220905 14:25:12.446" level="INFO">Selecting options from selection list 'id:Skills' by value Android.</msg>
+<status status="PASS" starttime="20220905 14:25:12.446" endtime="20220905 14:25:12.497"/>
+</kw>
+<status status="PASS" starttime="20220905 14:25:12.445" endtime="20220905 14:25:12.497"/>
+</kw>
+<kw name="Fechar navegador" library="setup_teardown" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220905 14:25:12.498" endtime="20220905 14:25:14.759"/>
+</kw>
+<status status="PASS" starttime="20220905 14:25:12.497" endtime="20220905 14:25:14.759"/>
+</kw>
+<status status="PASS" starttime="20220905 14:24:28.662" endtime="20220905 14:25:14.760"/>
+</test>
+<status status="PASS" starttime="20220905 14:24:27.999" endtime="20220905 14:25:14.762"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Cadastro">Cadastro</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20220905 14:24:28.214" level="ERROR">Error in file 'C:\Users\santo\OneDrive\Área de Trabalho\ESTRUTURA-ROBOT\resources\data\geral.robot' on line 2: Resource file '..\resources\main.robot' does not exist.</msg>
+<msg timestamp="20220905 14:24:28.217" level="ERROR">Error in file 'C:\Users\santo\OneDrive\Área de Trabalho\ESTRUTURA-ROBOT\resources\shared\setup_teardown.robot' on line 2: Resource file '..\resources\main.robot' does not exist.</msg>
+<msg timestamp="20220905 14:24:28.660" level="ERROR">Error in file 'C:\Users\santo\OneDrive\Área de Trabalho\ESTRUTURA-ROBOT\resources\pages\cadastro_page.robot' on line 3: Resource file '..\resources\main.robot' does not exist.</msg>
+</errors>
+</robot>
