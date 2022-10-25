@@ -31,7 +31,7 @@ Quando eu preencho os dados
     Input Text    ${cadastro.escreverEndereco}    ${ENDERECOFAKE}
     ${EMAILFAKE}  FakerLibrary.Email
     Input Text    ${cadastro.escreverEmail}    ${EMAILFAKE}
-E Clicar na opção masculino
+Quando clicar na opção masculino
     Click Element     ${cadastro.clicaOpcaoMasculina} 
      
 E Clica na opção movies

@@ -8,6 +8,6 @@ Test Teardown    Fechar navegador
 *** Test Cases ***
 Cenário 1: Deve realizar cadastro
     Quando eu preencho os dados
-    E Clicar na opção masculino
+    Quando clicar na opção masculino
     E Clica na opção movies
     E Selecionar Skill
