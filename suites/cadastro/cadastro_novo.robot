@@ -6,7 +6,7 @@ Test Teardown    Fechar navegador
 
 *** Test Cases ***
 Cenário 1: Deve realizar cadastro novo
-    Quando eu preencho os dados
-    Quando clicar na opção masculino
-    E Clica na opção movies
-    E Selecionar Skill
+    Dado eu preencho os dados
+    E clicar na opção masculino
+    Quando Clica na opção movies
+    Entao Selecionar Skill
